@@ -47,23 +47,23 @@ check uid and gid
 
 ### Log Poisoning  
 https://wiki.apache.org/httpd/DistrosDefaultLayout  
-Common log file location  
-Ubuntu, Debian  
+**Common log file location**  
+**Ubuntu, Debian**  
 /var/log/apache2/error.log  
 /var/log/apache2/access.log  
 
-Red Hat, CentOS, Fedora, OEL, RHEL  
+**Red Hat, CentOS, Fedora, OEL, RHEL**  
 /var/log/httpd/error_log  
 /var/log/httpd/access_log  
   
-FreeBSD  
+**FreeBSD**  
 /var/log/httpd-error.log  
 /var/log/httpd-access.log  
 
-Common Config file location  
+**Common Config file location**  
 check any restriction or hidden path on accessing the server  
 
-Ubuntu  
+**Ubuntu**  
 /etc/apache2/apache2.conf  
 
 /etc/apache2/httpd.conf  
@@ -71,7 +71,7 @@ Ubuntu
 /etc/httpd/httpd.conf  
 /etc/httpd/conf/httpd.conf  
 
-FreeBSD  
+**FreeBSD**  
 /usr/local/etc/apache2/httpd.conf  
 
 Hidden site?  
