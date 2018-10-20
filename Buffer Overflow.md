@@ -14,7 +14,7 @@
 
 ### 4. Confirm EIP by adding "B" * 4 after the number of offset. Also, add a number of "C" to track the number of characters that can be added after EIP to confirm length of shellcode
 
-### 5. Check bad characters after EIP. common bad characters are 0x00, 0x0A, 0x20. Follow dump in ESP to check are there something missing after that.
+### 5. Check bad characters after EIP. common bad characters are 0x00, 0x0A. Follow dump in ESP to check are there something missing after that.
 Add code:
 
 	badchar = [0x00]
