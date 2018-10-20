@@ -116,3 +116,20 @@ cp
 How can this application be run?  
 Can be modify the path variable so that it will execute something else  
 
+## NFS priv esc
+https://medium.com/@Kan1shka9/hacklab-vulnix-walkthrough-b2b71534c0eb
+
+## Linux capability
+find / -type f -print0 2>/dev/null | xargs -0 getcap 2>/dev/null
+getcap -r /
+
+google that capability on how it can help us get root
+
+## Mysql run by root
+MySQL 4.x/5.0 (Linux) - User-Defined Function (UDF) Dynamic Library
+https://www.exploit-db.com/exploits/1518/
+
+You can also try
+select sys_exec('echo test>/tmp/test.txt');
+select sys_eval('echo test>/tmp/test.txt');
+
