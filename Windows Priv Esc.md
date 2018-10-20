@@ -42,7 +42,7 @@ accesschk.exe /accepteula
 accesschk.exe -uwcqv "Authenticated Users" * /accepteula  
 accesschk.exe -ucqv <Service Name>  
 
-sc qc <Service Name> -- Get service details  
+sc qc \<Service Name> -- Get service details  
 
 Check service with weak file permission  
 User c:\windows\temp\  
