@@ -40,7 +40,7 @@ Check service config can be modify or not
 
 accesschk.exe /accepteula  
 accesschk.exe -uwcqv "Authenticated Users" * /accepteula  
-accesschk.exe -ucqv <Service Name>  
+accesschk.exe -ucqv \<Service Name>  
 
 sc qc \<Service Name> -- Get service details  
 
