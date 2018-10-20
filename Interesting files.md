@@ -1,5 +1,5 @@
 # Interesting files that worth looking at
-## Windows version:  
+## Windows  
 c:\windows\system32\eula.txt  
 cl\windows\system32\license.rtf  
 
@@ -25,3 +25,7 @@ c:\home2\bin\stable\apache\php.ini
 c:\home\bin\stable\apache\php.ini
 
 https://www.gracefulsecurity.com/path-traversal-cheat-sheet-windows/
+
+## Linux
+https://www.gracefulsecurity.com/path-traversal-cheat-sheet-linux/
+
