@@ -50,7 +50,7 @@ find /dir -xdev \( -nouser -o -nogroup \) -print   # Noowner files
 ### Writable by current user  
 find / perm /u=w -user `whoami` 2>/dev/null  
 find / -perm /u+w,g+w -f -user `whoami` 2>/dev/null  
-find / -perm /u+w -user `whoami` 2>/dev/nul  
+find / -perm /u+w -user `whoami` 2>/dev/null  
 
 ### Any script files that we can modify?  
 find / -writable -type f -name "*.py" 2>/dev/null     #find all python file that can be write by us  
